@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.Selectable
+  .DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
+  background-color: #f0f8ff !important;
+  color: inherit !important;
+}
+.Selectable .DayPicker-Day {
+  border-radius: 0 !important;
+}
+.Selectable .DayPicker-Day--start,
+.Selectable .DayPicker-Day--end {
+  position: relative;
+  background-color: #f0f8ff !important;
+  color: inherit !important;
+}
+.Selectable .DayPicker-Day--start::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background-color: royalblue;
+}
+.Selectable .DayPicker-Day--end:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background-color: royalblue;
+}
+
+.DayPickerInput input:focus {
+  outline: none;
+}
+
+.DayPickerInput input,
+.timePickerInput input {
+  background-color: #efeff0;
+  font-size: 18px;
+  display: inline-block;
+  height: auto;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 10px;
+}
+.timePickerInput1 {
+  text-align: center;
+}
+.timePickerInput1 input {
+  border: 1px solid grey !important;
+  font-size: 16px;
+  display: inline-block;
+  width: 70px;
+  height: auto;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 10px;
+}
+
+.dateInputClass {
+  position: absolute;
+  background-color: white;
+}
+
+.tag .react-tags {
+  font-size: 16px;
+}
+
+.tag .react-tags__selected {
+  display: inline;
+}
+
+.tag .react-tags__selected .react-tags__selected-tag {
+  background-color: #c8c8c8;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 30px;
+}
+
+.tag .react-tags__search {
+  display: inline-block;
+}
+.tag .react-tags__search-input {
+  width: 100% !important;
+  background-color: transparent;
+}
+
+.react-tags__search-input:focus {
+  outline: none;
+}
